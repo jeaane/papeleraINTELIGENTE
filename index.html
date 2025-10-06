@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papelera Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+  <header>
+    <h1>Papelera Inteligente</h1>
+    <p>Tecnología + Educación + Conciencia Ambiental</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#tecnica">Funcionamiento</a></li>
+      <li><a href="#simulacion">Simulación</a></li>
+      <li><a href="#narrativa">Narrativa</a></li>
+    </ul>
+  </nav>
+
+  <section id="objetivos">
+    <h2>🎯 Objetivos</h2>
+    <p>Diseñar una papelera automatizada que promueva la higiene, el aprendizaje tecnológico y la conciencia ecológica.</p>
+  </section>
+
+  <section id="tecnica">
+    <h2>⚙️ Funcionamiento Técnico</h2>
+    <p>El sistema utiliza Arduino UNO, sensor HC-SR04 y un servo motor para abrir la tapa automáticamente.</p>
+    <pre><code>
+#include &lt;Servo.h&gt;
+Servo tapa;
+// Código Arduino aquí...
+    </code></pre>
+  </section>
+
+  <section class="simulacion" id="simulacion">
+      <h2>🧪 Simulación Interactiva</h2>
+      <svg id="svgBin" viewBox="0 0 200 200" width="400" height="400">
+
+        <rect x="50" y="80" width="100" height="100" fill="#7f8c8d" rx="10" />
+        <rect id="lid" x="50" y="60" width="100" height="20" fill="#95a5a6" rx="10" />
+        <text x="100" y="150" text-anchor="middle" font-size="24">🦝</text>
+      </svg>
+      <button onclick="abrirTapa()">Activar Sensor</button>
+    </section>
+<section class="galeria">
+      <h2>🖼️ Galería de Fotos</h2>
+      <div class="gallery">
+        <img src="foto1.jpg" alt="Prototipo 1" onclick="ampliar(this)" />
+        <img src="foto2.jpg" alt="Sensor HC-SR04" onclick="ampliar(this)" />
+        <img src="foto3.jpg" alt="Arduino conectado" onclick="ampliar(this)" />
+      </div>
+      <div id="lightbox" onclick="cerrarLightbox()">
+        <img id="lightbox-img" />
+      </div>
+    </section>
+  <section id="narrativa">
+    <h2>🎭 Narrativa Creativa</h2>
+    <p><em>“Hola, soy Binny, tu papelera inteligente. ¡Gracias por cuidar el planeta conmigo!”</em></p>
+  </section>
+
+
+
+
+
+
+  <footer>
+    <p>© 2025 Jean - Proyecto Papelera Inteligente</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <div id="binnyAnimation"></div>
+
+<script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('binnyAnimation'), // el div donde se mostrará
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'animations/binny.json' // ruta al archivo JSON de la animación
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
