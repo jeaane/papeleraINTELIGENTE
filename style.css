@@ -1,89 +1,103 @@
+/* Tipografía y fondo general */
 body {
   font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  background-color: #fdf6f0;
+  color: #4e342e;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
-  color: #333;
 }
 
-header {
-  background: #2e8b57;
-  color: white;
-  padding: 2em;
-  text-align: center;
+/* Títulos */
+h1, h2, h5 {
+  color: #8d6e63;
 }
 
+h2 {
+  border-bottom: 2px solid #d7ccc8;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+/* Navegación personalizada */
 nav ul {
-  display: flex;
-  justify-content: center;
-  background: #444;
-  padding: 0;
-  margin: 0;
   list-style: none;
+  padding-left: 0;
 }
 
 nav ul li {
-  margin: 0 1em;
+  display: inline;
+  margin-right: 15px;
 }
 
-nav ul li a {
-  color: white;
+nav a {
+  color: #6d4c41;
   text-decoration: none;
-  padding: 1em;
-  display: block;
+  font-weight: bold;
 }
 
-section {
-  padding: 2em;
-  max-width: 800px;
-  margin: auto;
-}
-
-pre {
-  background: #eee;
-  padding: 1em;
-  overflow-x: auto;
-}
-
-button {
-  padding: 0.5em 1em;
-  background: #2e8b57;
-  color: white;
-  border: none;
+/* Galería de imágenes */
+.gallery img {
+  width: 100px;
+  margin: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1em;
+  transition: transform 0.3s ease;
 }
 
-#tapa {
-  margin-top: 1em;
-  font-size: 1.5em;
-  transition: transform 0.5s ease;
+.gallery img:hover {
+  transform: scale(1.1);
 }
 
-.cerrada {
-  transform: rotate(0deg);
-}
-
-.abierta {
-  transform: rotate(-45deg);
-  color: #2e8b57;
-}
-
-iframe {
+/* Lightbox */
+#lightbox {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
-#binnyAnimation {
+#lightbox img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+/* Simulación SVG */
+svg {
+  margin-top: 1em;
+}
+
+/* Footer */
+footer {
+  background-color: #d7ccc8;
+  text-align: center;
+  padding: 1em;
+  margin-top: 3em;
+  font-size: 0.8rem;
+}
+/* Interactividad suave en tarjetas de proyectos */
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+#bunnyLeft, #bunnyRight {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* o left: 20px para el otro lado */
-  width: 600px;
-  height: 600px;
+  width: 150px;
+  height: 150px;
   z-index: 10;
 }
 
+#bunnyLeft {
+  left: 20px;
+}
+
+#bunnyRight {
+  right: 20px;
+}
